@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starter_project/widgets/images.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -14,7 +15,20 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('Home'),
       ),
-      body: Container(),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.all(
+              16.0,
+            ),
+            child: Column(
+              children: <Widget>[
+                const ImagesAndIconWidget(),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
