@@ -28,3 +28,68 @@ class ImagesAndIconWidget extends StatelessWidget {
     );
   }
 }
+
+class BoxDecoratorWidget extends StatelessWidget {
+  const BoxDecoratorWidget({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      child: Container(
+        height: 100.0,
+        width: 100.0,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(
+            Radius.circular(20.0),
+          ),
+          color: Colors.orange,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 10.0,
+              offset: Offset(0.0, 10.0),
+            )
+          ],
+        ),
+      ),
+      padding: EdgeInsets.all(16.0),
+    );
+  }
+}
+
+class InputDecoratorsWidget extends StatelessWidget {
+  const InputDecoratorsWidget({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        TextField(
+          keyboardType: TextInputType.text,
+          style: TextStyle(
+            color: Colors.grey.shade800,
+            fontSize: 16.0,
+          ),
+          decoration: InputDecoration(
+            labelText: "Notes",
+            labelStyle: TextStyle(color: Colors.purple),
+            border: OutlineInputBorder(),
+          ),
+        ),
+        Divider(
+          color: Colors.lightGreen,
+          height: 50.0,
+        ),
+        TextFormField(
+          decoration: InputDecoration(
+            labelText: "Enter your notes",
+          ),
+        ),
+      ],
+    );
+  }
+}

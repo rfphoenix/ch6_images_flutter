@@ -24,6 +24,10 @@ class _HomeState extends State<Home> {
             child: Column(
               children: <Widget>[
                 const ImagesAndIconWidget(),
+                Divider(),
+                const BoxDecoratorWidget(),
+                Divider(),
+                const InputDecoratorsWidget(),
               ],
             ),
           ),
